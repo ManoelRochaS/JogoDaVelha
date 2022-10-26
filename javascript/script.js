@@ -162,7 +162,7 @@ function engine(location){
             interfaceOne.style.display="none";
             interfaceTwo.style.display="none";
             interfaceTree.style.display="flex";
-            console.log("Empate!");
+            document.getElementById('Result').innerText = "Empate!";
         },500)    
     }
 }
