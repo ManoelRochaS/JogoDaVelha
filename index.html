@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Jogo da Velha</title>
+      <link href="./css/style.css" type="text/css" rel="stylesheet">
+      <link href="./css/photoGallery/logo.png" rel="icon">
+  </head>
+    <body>
+      <header>
+        <h1>Jogo da Velha</h1>
+      </header>
+      <main>
+        <section class="interfaceOne" id="interfaceOne">
+          <form>
+            <input type="text" placeholder="Player 1" id="PlayerOne">
+            <input type="text" placeholder="Player 2" id="PlayerTwo">
+          </form>
+          <p onclick="start()">Iniciar Jogo</p>
+        </section>
+        <section class="interfaceTwo" id="interfaceTwo">
+          <h3 id="TitleCurrent"></h3>
+          <aside>
+            <div>
+              <p onclick="engine(1)"><span id="One"></span></p>
+              <p onclick="engine(4)" class="centralRow"><span id="Four"></span></p>
+              <p onclick="engine(7)"><span id="Seven"></span></p>
+            </div>
+            <div class="centralColumn">
+              <p onclick="engine(2)"><span id="Two"></span></p>
+              <p onclick="engine(5)" class="centralRow"><span id="Five"></span></p>
+              <p onclick="engine(8)"><span id="Eight"></span></p>
+            </div>
+            <div>
+              <p onclick="engine(3)"><span id="Tree"></span></p>
+              <p onclick="engine(6)" class="centralRow"><span id="Six"></span></p>
+              <p onclick="engine(9)"><span id="Nine"></span></p>
+            </div>
+          </aside>
+        </section>
+        <section class="interfaceTree" id="interfaceTree">
+          <h3 id="Result"></h3>
+          <p onclick="restart()">Reiniciar</p>
+          <p onclick="reset()">Novo Jogo</p>
+        </section>
+      </main>
+      <script src="./javascript/script.js"></script>
+    </body>
+</html>
