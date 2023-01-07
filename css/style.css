@@ -1,5 +1,5 @@
 
-/*Media Queries - horizontal orientation*/
+/*Configuração Geral do Documento html*/
 *{
     padding: 0px;
     margin: 0px;
@@ -9,243 +9,178 @@ body{
     height: 100vh;
     display: flex;
     flex-flow: column wrap;
-    color: white;
+    color: #ffffff;
     background-color: #0c141d;
-    position: relative;
 }
+    /*Header do Documento com Título Descrito por h1*/
     header{
         width: 100%;
         height: 20vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
     }
-        header h1{
-            font-size: 10vh;
-        }
+    /*Main do Documento com seções decritas por section e outros hereditários*/
     main{
         background-color: #080d14;
-        margin-top: 20vh;
         height: 80vh;
         width: 100%;
     }
         main section{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: center;
             width: 100%;
             height: 80vh;
         }
-        main .interfaceOne{
-            display: flex;
-            flex-flow: column wrap;
-            align-items: center;
-            justify-content: center;
+        main .InterfaceStart{
+            justify-content: center !important;
         }
-            .interfaceOne form{
-                width: 50%;
-                height: 40vh;
+            .InterfaceStart form{
                 display: flex;
-                flex-flow: row wrap;
                 justify-content: space-evenly;
                 align-items: center;
                 background-image: url(./photoGallery/background.png);
                 background-size: 10vh;
                 background-repeat:repeat;
-                background-position: center;    
-            }
-                .interfaceOne form input{
-                    font-size: 1.5vw;
+                background-position: center; 
+            }                
+                .InterfaceStart form input{
+                    outline: 0;
+                    text-align: center;
                     padding: 2vh;
                     border-radius: 1vh;
-                    text-align: center;
-                    background-color: white;
-                    border: 0.2vh solid #080d14;
-                }
-                .interfaceOne form input:hover{
-                    border: 0.2vh solid #0c141d;
-                    background-color: gray;
-                    color: #080d14;
-                }
-                .interfaceOne form input:focus{
                     border: 0.2vh solid transparent;
+                }
+                .InterfaceStart form input::placeholder{
                     color: #080d14;
                 }
-            .interfaceOne p{
-                margin: 5vh;                
-                width: 10vw;
-                text-align: center;
-                font-size: 1.8vw;
-                padding: 2vh 4vh;
-                border-radius: 1vh;
-                border: 0.2vh solid #080d14;
-                background-color: white;
-                color: #080d14;
-            }
-            .interfaceOne p:hover{
-                background-color: gray;
-            }
-            .interfaceOne p:active{
-                color: white;
-                background-color: #080d14;
-                border-color: white;
-            }
-        main .interfaceTwo{
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: space-evenly;
-            align-items: center;
+                .InterfaceStart form input:focus{
+                    background-color: #0c141d;
+                    border-color: #ffffff;
+                    color: #ffffff;
+                }
+                .InterfaceStart form input:focus::placeholder{
+                    color: #ffffff;
+                }
+                .button{ 
+                    padding: 2vh 4vh;
+                    border-radius: 1vh;
+                    border: 0.2vh solid #ffffff;
+                    background-color: #080d14;
+                    color: #ffffff;
+                    cursor:pointer;
+                }
+                .button:hover{
+                    background-color: #ffffff;
+                    color: #080d14;
+                }
+        main .InterfaceDisplay{
             display: none;
         }
-            .interfaceTwo h3{
-                width: 50%;
-                padding: 2vh;
-                font-size: 5vh;
+            .InterfaceDisplay h1{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 text-align: center;
             }
-            .interfaceTwo aside{
-                height: 61vh;
-                width: 61vh;
+            .InterfaceDisplay aside{
                 display: flex;
                 flex-flow: row wrap;
                 background-color: #0c141d;
-                box-shadow:  0vh 0.1vh 1vh 0.1vh white;
             }
-                .interfaceTwo aside div{
-                    height: 61vh;
-                    width: 20vh;
+                aside p{
                     display: flex;
-                    flex-flow: column wrap;
+                    justify-content: center;
+                    align-items: center;
+                    border: solid 0 #ffffff;
                 }
-                .interfaceTwo aside .centralColumn{
-                    border-left: 0.5vh solid white;
-                    border-right: 0.5vh solid white;
-                }
-                    .interfaceTwo aside div p{
-                        width: 20vh;
-                        height: 20vh;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    .interfaceTwo aside div .centralRow{
-                        border-top: 0.5vh solid white;
-                        border-bottom: 0.5vh solid white;
-                    }
-                        .interfaceTwo span{
-                            font-size: 4vw;
-                        }
-        main .interfaceTree{
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: space-evenly;
-            align-items: center;
-            display: none;
-        }
-            .interfaceTree h3{
-                font-size: 3vw;
-                padding: 3vh 0vw;
-            }
-            .interfaceTree p{
-                margin: 5vh;
-                width: 10vw;
-                text-align: center;
-                font-size: 1.8vw;
-                padding: 2vh 4vh;
-                border-radius: 1vh;
-                border: 0.2vh solid #080d14;
-                background-color: white;
-                color: #080d14;
-            }
-            .interfaceTree p:hover{
-                background-color: gray;
-            }
-            .interfaceTree p:active{
-                color: white;
-                background-color: #080d14;
-                border-color: white;
-            }
         
-/*Media Queries - Orientação Vertical*/
-@media all and (orientation: portrait){
+/*Configuração Horizontal do Documento html*/
+@media (orientation: landscape){
+    /*Header do Documento com Título Descrito por h1*/
+        header h1{
+            font-size: 5vw;
+        }
+    /*Main do Documento com seções decritas por section e outros hereditários*/
+            .InterfaceStart form{
+                width: 50%;
+                height: 40vh;
+                flex-flow: row wrap;
+                margin-bottom: 10vh;
+            }
+                .InterfaceStart form input{
+                    font-size: 1.5vw;
+                }
+                .InterfaceStart h1{
+                    font-size: 1.8vw;
+                }
+            .InterfaceDisplay h1{
+                    height: 9vh;
+                    font-size: 2.5vw;
+            }
+            .InterfaceDisplay aside{
+                    height: 61vh;
+                    width: 61vh;
+                    box-shadow:  0vh 0.1vh 1vh 0.1vh #ffffff;
+            }
+                aside p{
+                        height: 20vh;
+                        width: 20vh;
+                        font-size: 4vw;
+                }
+                aside .vertical{
+                        border-left-width: 0.5vh;
+                        border-right-width: 0.5vh;
+                }
+                aside .horizontal{
+                        border-top-width: 0.5vh;
+                        border-bottom-width: 0.5vh;
+                }        
+}
 
-    header{
-        width: 100%;
-        height: 20vh;
-    }
+/*Configuração Vertical do Documento html*/
+@media (orientation: portrait){
+    /*Header do Documento com Título Descrito por h1*/
         header h1{
             font-size: 13vw;
         }
-
-        main .interfaceOne{
-            display: flex;
-            flex-flow: column wrap;
-            align-items: center;
-            justify-content: center;
-        }
-            .interfaceOne form{
+    /*Main do Documento com seções decritas por section e outros hereditários*/
+            .InterfaceStart form{
                 width: 80%;
                 height: 40vh;
                 padding: 5vh 0vw;
                 flex-flow: column wrap;
+                margin-bottom: 5vh;
             }
-                .interfaceOne form input{
+                .InterfaceStart form input{
                     font-size: 2.2vh;
-                    padding: 2vh;
-                    border-radius: 1.1vh;
                 }
-            .interfaceOne p{
-                margin: 5vh;                
-                width: 30vw;
-                font-size: 2.2vh;
-                border-radius: 1.1vh;
+                .InterfaceStart h1{
+                    font-size: 2.2vh;
+                } 
+            .InterfaceDisplay h1{
+                    height: 10vh;
+                    font-size: 7vw;
             }
-
-            .interfaceTwo h3{
-                width: 80%;
-                padding: 1vh 2vh;
-                font-size: 7vw;
-                text-align: center;
-            }
-            .interfaceTwo aside{
-                height: 76vw;
-                width: 76vw;
-                display: flex;
-                flex-flow: row wrap;
-                background-color: #0c141d;
-                box-shadow:  0vh 0.2vw 2vw 0.2vw white;
-            }
-                .interfaceTwo aside div{
+            .InterfaceDisplay aside{
                     height: 76vw;
-                    width: 25vw;
-                }
-                .interfaceTwo aside .centralColumn{
-                    border-left: 0.5vw solid white;
-                    border-right: 0.5vw solid white;
-                }
-                    .interfaceTwo aside div p{
-                        width: 25vw;
+                    width: 76vw;
+                    box-shadow:  0vh 0.2vw 2vw 0.2vw #ffffff;
+            }
+                aside p{
                         height: 25vw;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    .interfaceTwo aside div .centralRow{
-                        border-top: 0.5vw solid white;
-                        border-bottom: 0.5vw solid white;
-                    }
-                        .interfaceTwo span{
-                            font-size: 10vw;
-                        }
-
-            .interfaceTree h3{
-                width: 70%;
-                padding: 2vh;
-                font-size: 7vw;
-                text-align: center;
-            }
-            .interfaceTree p{
-                margin: 5vh;               
-                width: 30vw;
-                font-size: 2.2vh;
-                border-radius: 1.1vh;
-            }
+                        width: 25vw;
+                        font-size: 10vw;
+                }
+                aside .vertical{
+                        border-left-width: 0.5vw;
+                        border-right-width: 0.5vw;
+                }
+                aside .horizontal{
+                        border-top-width: 0.5vw;
+                        border-bottom-width: 0.5vw;
+                }           
 }
